@@ -67,7 +67,7 @@ body {
 /* Container Styling */
 .container {
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 990px;
   margin: auto;
 }
 
@@ -75,7 +75,7 @@ body {
 header h1 {
   text-align: center;
   color: #fff;
-  font-size: 3.8rem;
+  font-size: 3rem;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
