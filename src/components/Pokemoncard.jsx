@@ -52,7 +52,7 @@ export const Pokemoncard = ({cur}) => {
         
       </div>
       
-      <NavLink to={`/pokemon/${cur.name}`}><button className="btn-donate">Read More</button></NavLink>
+      <NavLink to={`/${cur.name}`}><button className="btn-donate">Read More</button></NavLink>
     </li>
   );
 };
