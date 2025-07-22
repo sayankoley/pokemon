@@ -1,33 +1,28 @@
-import './App.css'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Pokemon } from './pokemon'
+import './App.css';
+import { createHashRouter, RouterProvider } from "react-router-dom";
+import { Pokemon } from './pokemon';
 import Applayout from './AppLayout';
 import { PokemonDetails } from './PokemonDetails';
-const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: <Applayout />,
-      children: [
-        {
-          path: "/",
-          element: <Pokemon />,
-        },
-        {
-          path: "/:id", 
-          element: <PokemonDetails />,
-        },
-      ],
-    },
-  ],
-  {
-    basename: "/pokemon", 
-  }
-);
 
+const router = createHashRouter([
+  {
+    path: "/",
+    element: <Applayout />,
+    children: [
+      {
+        path: "/",
+        element: <Pokemon />,
+      },
+      {
+        path: "/:id", 
+        element: <PokemonDetails />,
+      },
+    ],
+  },
+]);
 
 function App() {
- return <RouterProvider router={router}></RouterProvider>
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
